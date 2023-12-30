@@ -16,7 +16,8 @@
   }
 }
 
-body {
+body,
+select {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
       to bottom,
@@ -24,4 +25,7 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+}
+.active {
+  @apply bg-blue-700 rounded md:bg-transparent;
 }
