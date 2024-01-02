@@ -6,7 +6,7 @@ type Props = {
 
 export default function MoviesList({ movies }: Props) {
   return (
-    <div className="grid md:grid-cols-3 lg:grid-cols-4 sm:grid-cols-2 gap-8">
+    <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 sm:grid-cols-2 gap-8">
       {movies.map((movie) => (
         <MovieItem key={movie.id} movie={movie} />
       ))}

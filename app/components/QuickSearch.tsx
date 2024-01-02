@@ -25,6 +25,7 @@ export default function QuickSearch({}: Props) {
       <div className=" px-2 py-4">
         {data.map((movie) => (
           <div
+            key={movie.id}
             onClick={() => onClick(movie.id)}
             className="flex overflow-hidden mb-2 bg-gray-900 hover:bg-gray-800 cursor-pointer"
           >

@@ -1,5 +1,6 @@
 "use client";
 import React, { useState } from "react";
+import { BsSearch } from "react-icons/bs";
 import Link from "next/link";
 type Props = {};
 
@@ -7,7 +8,7 @@ function Search({}: Props) {
   const [search, setSearch] = useState<String>("");
 
   return (
-    <div className="flex flex-col gap-4 sm:flex-row  items-start sm:items-center my-8 ">
+    <div className="flex gap-4 items-center my-8 ">
       <input
         onChange={(e) => setSearch(e.target.value)}
         type="text"
@@ -20,9 +21,9 @@ function Search({}: Props) {
           window.location.href = `/search?key=${search}`;
         }}
         type="button"
-        className="text-blue-700 hover:text-white border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2 text-center  dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500 dark:focus:ring-blue-800"
+        className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
       >
-        Search
+        <BsSearch />
       </button>
     </div>
   );
